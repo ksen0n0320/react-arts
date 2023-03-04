@@ -1,0 +1,182 @@
+
+body {
+  margin: 0;
+  font-family: system-ui;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #540202;
+}
+
+//всем элементам шрифт Inter
+* {
+  font-family: 'Inter', system-ui;
+}
+
+.wrapper { 
+  background: #ffffff;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.04);
+  border-radius: 20px;
+  max-width: 1080px;
+  margin: 50px auto;
+  
+}
+
+header {
+  //это как один из вариантов, но для работы в дальнейшем можно исп macro-css
+  /*display: flex; 
+  justify-content: space-between;*/
+  border-bottom: 1px solid #f4f4f4;
+
+    img {
+      margin-right: 15px;
+    }
+
+    h3, p{
+      margin: 3;
+    }
+  }
+
+  .content {
+    h1 {
+      margin: 0;
+    }
+  }
+
+  .card {
+    border: 1px solid #f8e8f8;
+    padding: 20px;
+    width: 245px;
+    margin-right: 15px;
+    transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+      box-shadow: 0px 14px 35px rgba(0, 0, 0, 0.15);
+      transform: translateY(-5px); //при наведении карточка поднимается на 5px
+    }
+
+    p{
+      font-weight: 400;
+      font-size: 14px;
+    }
+  }
+
+  .button {
+    background: #ffffff;
+    border: 1px solid #f2f2f2;
+    box-sizing: border-box;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+  }
+
+  .search-block {
+    border: 1px #f3f3f3;
+    border-radius: 10px;
+    padding: 0 15px;
+
+    input {
+      border: 0;
+      padding: 10px;
+      font-size: 16px;
+      width: 200px;
+    }
+  }
+
+  .overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.1);
+    z-index: 1px;
+  }
+
+  .cart {
+    position: absolute;
+    width: 440px;
+    height: 100%;
+    right: 0;
+    background: #ffffff;
+    box-shadow: -10px 4px 24px rgba(0, 0, 0, 0.5);
+    padding: 30px;
+
+    h2 {
+      margin: 0;
+      ;
+    }
+  }
+
+  .cartPoint{
+
+    ul {
+      margin-bottom: 20px !important;
+    }
+    
+    li {
+      display: flex;
+      align-items: flex-end;
+    }
+
+    div {
+      flex: 1;
+      height: 1px;
+      border-bottom: 1px dashed #9b9a9a;
+      position: relative;
+      top: -4px;
+      margin: 0 7px;
+      
+    }
+
+    button {
+      width: 100%;
+      height: 55px;
+      background: #540202;
+      border-radius: 18px;
+      border: 0;
+      color: #ffffff;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.2s ease-in-out;
+
+      &:hover {
+        background: lighten($color: #540202, $amount: 10%);
+      }
+
+      &:active {
+        background: darken($color: #540202, $amount: 5%);
+      }
+    }
+
+    
+  }
+
+  .cartItem {
+    border: 1px solid #f3f3f3;
+    overflow: hidden;
+    padding: 5px;
+
+    p {
+      font-size: 16px;
+    }
+
+    b {
+      font-size: 16px;
+    }
+
+    //анимация при наведении на кнопку
+    .removeBtn {
+      opacity: 0.5;
+      cursor: pointer;
+      transition: opacity 0.2s ease-in-out;
+
+      &:hover {
+        opacity: 1;
+      }
+
+      
+    }
+  }
+
